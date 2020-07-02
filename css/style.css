@@ -1,0 +1,603 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f2ecda;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+}
+
+.logo h2 {
+  margin: 0;
+}
+.logo h2 .fa-shopping-cart {
+  font-size: 24px;
+  margin-right: 3px;
+  transform: translateY(-2px);
+}
+
+#Menu-Items {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#Menu-Items li {
+  padding: 0px 10px;
+}
+#Menu-Items li img {
+  width: 100%;
+}
+
+.Menu {
+  display: none;
+  margin: 0;
+  position: absolute;
+  left: 5%;
+  z-index: 100;
+  width: 90%;
+  min-height: 80vh;
+  background-color: lightslategray;
+  transition: all 0.5s ease-in;
+}
+.Menu #Menu-Items {
+  margin-top: 20px;
+}
+.Menu #Menu-Items li {
+  padding: 10px;
+}
+
+#Auth {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: space-between;
+}
+#Auth li {
+  list-style-type: none;
+}
+#Auth li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+}
+#Auth li a:hover {
+  color: #ff9d00;
+  transition: all 0.2s ease-in;
+}
+#Auth li .fa-grip-lines-vertical:before {
+  margin: 4px;
+}
+
+.icons a {
+  width: 100%;
+  color: #000;
+  margin: 5px;
+  cursor: pointer;
+}
+.icons a .fa-facebook,
+.icons a .fa-telegram,
+.icons a .fa-instagram,
+.icons a .fa-youtube {
+  font-size: 35px;
+}
+.icons a:hover {
+  color: rebeccapurple;
+  transition: all 0.2s ease-in;
+}
+
+.nav-item .nav-link:hover {
+  color: #ff9d00 !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.carousel-item img {
+  min-height: 450px;
+  margin-top: 0px;
+}
+
+#dastlabkiMahsulot {
+  font-size: 14px;
+}
+
+.fa-shopping-basket {
+  font-size: 35px;
+  transform: translateX(8px);
+}
+
+.badge {
+  transform: translateY(-19px) translateX(-3px);
+}
+
+#SavatdagiMahsulotlar {
+  cursor: pointer;
+}
+
+#TanlanganMahsulotlar {
+  width: 400px;
+  max-width: 400px;
+  min-height: 30vh;
+  background-color: #f5f1e4;
+  position: absolute;
+  z-index: 100;
+  display: none;
+  padding: 10px;
+  right: 80px;
+}
+#TanlanganMahsulotlar h5,
+#TanlanganMahsulotlar hr,
+#TanlanganMahsulotlar p {
+  margin: 15px;
+}
+
+#SavatchadagiMahsulot div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+#SavatchadagiMahsulot p {
+  font-size: 14px;
+}
+
+.clear {
+  display: flex;
+  align-self: flex-end;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+}
+
+.clear:hover {
+  color: red;
+  transition: all 0.1s ease-in;
+  font-weight: bold;
+}
+
+#title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#title h4 {
+  padding: 5px;
+}
+#title a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 30px;
+}
+
+#lineBlack {
+  height: 1px;
+  width: 50px;
+  margin: 0px;
+  background-color: #000;
+  transform: translateY(-18px);
+}
+
+#wrapper-Product {
+  width: 100%;
+  text-align: center;
+}
+#wrapper-Product .inner {
+  overflow: hidden;
+}
+#wrapper-Product .inner img {
+  transition: all 0.7s ease-in-out;
+}
+#wrapper-Product .inner:hover img {
+  transform: scale(1.1);
+}
+#wrapper-Product .card {
+  width: 16em;
+  border-radius: 5px;
+  background-color: #f5f1e4;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  box-shadow: -5px 8px 9px 1px #e3dac1;
+}
+#wrapper-Product .card:hover {
+  transform: translateY(-10px);
+  transition: all 0.5s ease-in-out;
+  box-shadow: 1px 0px 18px -5px #000;
+}
+
+#wrapper-Product2 {
+  text-align: center;
+  width: 100%;
+}
+#wrapper-Product2 .inner {
+  overflow: hidden;
+}
+#wrapper-Product2 .inner img {
+  transition: all 0.7s ease-in-out;
+}
+#wrapper-Product2 .inner:hover img {
+  transform: scale(1.1);
+}
+#wrapper-Product2 .card {
+  width: 16em;
+  border-radius: 5px;
+  background-color: #f5f1e4;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+  box-shadow: -5px 8px 9px 1px #e3dac1;
+}
+#wrapper-Product2 .card:hover {
+  transform: translateY(-10px);
+  transition: all 0.5s ease-in-out;
+  box-shadow: 1px 0px 18px -5px #000;
+}
+
+.Help {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  border: 1px solid #1d2024;
+  transition: all 0.2s ease-in;
+}
+
+.Help:hover {
+  background-color: #1d2024;
+  color: #fff;
+  font-weight: bold;
+  border: 1px solid;
+  border: 1px solid #81ade7;
+  transition: all 0.2s ease-in;
+}
+
+.Info .fa-hands-helping,
+.Info .fa-shipping-fast,
+.Info .fa-gift,
+.Info .fa-praying-hands {
+  font-size: 30px;
+}
+
+.fa-cc-paypal,
+.fa-cc-mastercard,
+.fa-cc-visa,
+.fa-cc-apple-pay {
+  font-size: 50px;
+}
+
+#ortiqchaMalumot a {
+  text-decoration: none;
+  color: #000;
+}
+#ortiqchaMalumot p {
+  transition: all 0.5s ease-in-out;
+}
+#ortiqchaMalumot p:hover {
+  transform: translateX(20px);
+  transition: all 0.5s ease-in-out;
+}
+
+iframe {
+  width: 100%;
+  height: 70vh;
+}
+
+.Slider {
+  padding: 20px 0;
+  max-height: 550px;
+}
+
+#Manzil {
+  transition: all 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    margin-top: 10px;
+  }
+
+  .logo {
+    text-align: center;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .logo h2 {
+    font-size: 20px;
+  }
+  .logo h2 .fa-shopping-cart {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  #Auth {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #Auth .fa-grip-lines-vertical {
+    display: none;
+  }
+
+  .Menu {
+    width: 100%;
+    left: 0;
+  }
+
+  #SavatdagiMahsulotlar {
+    margin: 0 !important;
+    justify-content: center;
+  }
+
+  #SearchBtn {
+    margin-top: 20px;
+  }
+
+  #TanlanganMahsulotlar {
+    width: 300px;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+
+  p.Email {
+    display: none;
+  }
+
+  #rightImg {
+    display: none;
+  }
+
+  .Slider {
+    padding: 20px 0;
+    max-height: 300px;
+  }
+
+  .carousel-item img {
+    min-height: 250px;
+    margin-top: 0px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 575px) {
+  #rightImg {
+    display: none;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 768px) {
+  .Slider {
+    padding: 20px 0;
+  }
+
+  #title {
+    margin: 0;
+    justify-content: space-around;
+  }
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+  }
+  .logo h2 {
+    font-size: 18px;
+  }
+  .logo h2 .fa-shopping-cart {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+
+  #Auth {
+    display: flex;
+    flex-direction: column;
+  }
+  #Auth .fa-grip-lines-vertical {
+    display: none;
+  }
+
+  p.Email {
+    display: none !important;
+  }
+
+  #SavatdagiMahsulotlar {
+    justify-content: flex-end;
+  }
+
+  #form {
+    margin-bottom: 0px !important;
+  }
+
+  #LeftImg img {
+    width: 100%;
+  }
+
+  #RightImg {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .carousel-item img {
+    min-height: 251px;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+  #title {
+    margin: 0;
+    justify-content: space-around;
+  }
+
+  p.Email {
+    display: none;
+  }
+
+  .Help {
+    width: 100%;
+  }
+  .Help h5 {
+    text-align: center;
+    font-size: 16px;
+  }
+
+  #Bepul {
+    margin-bottom: -11px;
+    padding: 0;
+  }
+
+  .Info .fa-hands-helping,
+.Info .fa-shipping-fast,
+.Info .fa-gift,
+.Info .fa-praying-hands {
+    font-size: 25px;
+  }
+
+  #SavatdagiMahsulotlar {
+    justify-content: flex-end;
+  }
+
+  #LeftImg img {
+    max-width: 200px;
+    margin-right: 20px;
+  }
+
+  #RightImg img {
+    max-width: 200px;
+  }
+
+  .carousel-item img {
+    min-height: 300px;
+  }
+}
+@media screen and (min-width: 991px) and (max-width: 1023px) {
+  p.Email {
+    display: none;
+  }
+
+  .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0.5;
+    font-size: 16px;
+  }
+
+  .Give {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+  }
+
+  #form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #SearchBtn {
+    margin-top: 5px;
+  }
+
+  #SavatdagiMahsulotlar {
+    margin-left: 0 !important;
+  }
+
+  .badge {
+    transform: translateY(-47px) translateX(37px);
+  }
+
+  #Savatcha {
+    margin-left: 5px;
+  }
+
+  #LeftImg img {
+    width: 250px;
+  }
+
+  #RightImg img {
+    width: 250px;
+  }
+
+  .carousel-item img {
+    min-height: 370px;
+  }
+
+  #title {
+    margin: 0;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+  p.Email {
+    display: none;
+  }
+
+  .nav-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-shrink: 0.5;
+    font-size: 16px;
+  }
+
+  .Give {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+  }
+
+  #form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #SearchBtn {
+    margin-top: 5px;
+  }
+
+  #SavatdagiMahsulotlar {
+    margin-left: 0 !important;
+  }
+
+  .badge {
+    transform: translateY(-47px) translateX(37px);
+  }
+
+  #Savatcha {
+    margin-left: 5px;
+  }
+
+  #LeftImg img {
+    width: 250px;
+  }
+
+  #RightImg img {
+    width: 250px;
+  }
+
+  .carousel-item img {
+    min-height: 370px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

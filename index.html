@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online Shop</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./bootstrap/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="mainContent">
+      <header class="container">
+        <div class="logo">
+          <h2><i class="fas fa-shopping-cart"></i>Online Shop</h2>
+        </div>
+        <div>
+          <ul id="Auth">
+            <li>
+              <i class="fas fa-user-alt"></i>
+              <a href="./Auth/Auth.html" target="__blank">Kirish</a>
+            </li>
+            <li>
+              <i class="fas fa-grip-lines-vertical"></i>
+              <a href="./Auth/Auth.html" target="__blank"> Ro'yhatdan o'tish</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="bg-white">
+        <nav class="container navbar navbar-expand-lg navbar-light bg-white">
+          <a class="navbar-brand" href="#"
+            >Mahsulotlar<i class="fas fa-angle-down ml-1"></i
+          ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto text-uppercase text-dark">
+              <li class="nav-item">
+                <a class="nav-link text-dark mr-2" href="#Xizmatlar"
+                  >Xizmatlar</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark Give mr-2" href="#footer"
+                  >Ma'lumotlar</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-dark mr-2" href="#Manzil">Manzil</a>
+              </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" id="form">
+              <input
+                class="form-control mr-sm-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                class="btn btn-outline-success"
+                id="SearchBtn"
+                type="submit"
+              >
+                Search <i class="fas fa-search"></i>
+              </button>
+            </form>
+            <div
+              class="ml-5 d-flex align-items-center"
+              id="SavatdagiMahsulotlar"
+            >
+              <div>
+                <i class="fas fa-shopping-basket"></i>
+                <span
+                  class="badge badge-pill badge-danger badge-sm"
+                  id="Dastlabki-Mahsulot-Soni"
+                  >0</span
+                >
+              </div>
+              <div id="Savatcha">
+                <h6 class="m-0">Savatcha</h6>
+                <span id="dastlabkiMahsulot">Mahsulot yo'q</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div id="TanlanganMahsulotlar">
+        <h5>Savatcha</h5>
+        <hr />
+        <ul class="pl-3 p-2 list-unstyled" id="SavatchadagiMahsulot">
+          <p class="m-0">Savatchada mahsulotlar yo'q</p>
+        </ul>
+        <hr />
+        <p>
+          Jami mahsulotlar soni : <strong id="All-Products-Number">0</strong> ta
+        </p>
+        <p>
+          Ularning umumiy qiymati :
+          <strong id="Hamyondagi-Dastlabki-Pul">0 </strong> so'm
+        </p>
+        <button class="btn btn-success my-2 w-100">Xarid qilish</button>
+      </div>
+      <div class="Menu">
+        <ul id="Menu-Items">
+          <li>
+            <a href="#">
+              <img src="./menu img/Group-2-1.webp" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./menu img/Group-2-13.webp" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./menu img/Group-2-2-1.webp" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./menu img/Group-2-3.webp" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./menu img/Group-2-4.webp" alt="" />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="./menu img/Group-2-6.webp" alt="" />
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="Slider d-flex justify-content-center align-items-center">
+        <div class="container">
+          <div class="row">
+            <div class="col-4 col-sm-3 col-md-3" id="leftImg">
+              <img src="./img/left and right img.png" class="w-100 h-100" />
+            </div>
+            <div class="col-8 col-sm-6 col-md-6">
+              <div
+                id="carouselExampleIndicators"
+                class="carousel slide"
+                data-ride="carousel"
+              >
+                <ol class="carousel-indicators">
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="1"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="2"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="3"
+                  ></li>
+                  <li
+                    data-target="#carouselExampleIndicators"
+                    data-slide-to="4"
+                  ></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      class="d-block w-100"
+                      src="./img/1.jpeg"
+                      alt="First slide"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./img/2.jpeg"
+                      alt="Second slide"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./img/3.jpeg"
+                      alt="Third slide"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./img/4.jpeg"
+                      alt="Third slide"
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      class="d-block w-100"
+                      src="./img/5.jpeg"
+                      alt="Third slide"
+                    />
+                  </div>
+                </div>
+                <a
+                  class="carousel-control-prev"
+                  href="#carouselExampleIndicators"
+                  role="button"
+                  data-slide="prev"
+                >
+                  <span
+                    class="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a
+                  class="carousel-control-next"
+                  href="#carouselExampleIndicators"
+                  role="button"
+                  data-slide="next"
+                >
+                  <span
+                    class="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+            </div>
+            <div class="col-4 col-sm-3 col-md-3" id="rightImg">
+              <img src="./img/left and right img.png" class="w-100 h-100" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="mt-3 pb-3">
+      <div class="container pb-3 text-center">
+        <div id="title" class="mt-4 d-flex flex-column justify-content-center">
+          <h4 class="text-uppercase m-0 text-dark font-weight-bold">
+            Ko'p tanlanayotgan mahsulotlar
+          </h4>
+          <!-- <a href="#" class="text-dark font-weight-bold">ko'proq ko'rish</a> -->
+          <hr class="w-50" />
+          <hr id="lineBlack" />
+        </div>
+        <div id="wrapper-Product"></div>
+      </div>
+    </section>
+    <section class="mt-3 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div id="title" class="mt-4">
+              <h4
+                class="text-uppercase text-center m-0 text-dark font-weight-bold"
+              >
+                Yangi mahsulotlar
+              </h4>
+              <a href="#" class="text-dark font-weight-bold">ko'proq ko'rish</a>
+            </div>
+          </div>
+        </div>
+        <div id="wrapper-Product2" class="text-center"></div>
+      </div>
+    </section>
+
+    <div class="Info py-5" id="Xizmatlar">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-3 col-12 col-sm-6 m-0 p-0">
+            <div class="Help">
+              <i class="fas fa-hands-helping mb-1"></i>
+              <h5>Yordam</h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-12 col-sm-6 m-0 p-0">
+            <div class="Help">
+              <i class="fas fa-shipping-fast mb-1"></i>
+              <h5 id="Bepul">Bepul yetkazib berish</h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-12 col-sm-6 m-0 p-0">
+            <div class="Help">
+              <i class="fas fa-gift mb-1"></i>
+              <h5>Sovg'alar</h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-12 col-sm-6 m-0 p-0">
+            <div class="Help">
+              <i class="fas fa-praying-hands mb-1"></i>
+              <h5>Ehson qilish uchun</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="container">
+        <h2 class="text-center py-4">Ma'lumotlar</h2>
+        <div class="row">
+          <div class="col-md-3 col-sm-3 mb-3 text-center">
+            <strong>SAVOLLAR BORMI? QO‘NG‘IROQ QILING!</strong>
+            <p class="mt-2 mb-2">(+998) 90 019-60-02</p>
+            <div class="icons">
+              <h6 class="mb-2 font-weight-bold">
+                Bizni ijtimoiy tarmoqlarda kuzating:
+              </h6>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-telegram"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-3 mb-2 text-center" id="ortiqchaMalumot">
+            <p><a href="#">Muddatli to'lov shartlari</a></p>
+            <p><a href="#">Biz haqimizda</a></p>
+            <p><a href="#">Tovarni qaytarish</a></p>
+          </div>
+          <div class="col-md-3 col-sm-3 mb-3 text-center">
+            <h4 class="font-weight-bold">To'lov turlari</h4>
+            <i class="fab fa-cc-paypal"></i>
+            <i class="fab fa-cc-mastercard"></i>
+            <i class="fab fa-cc-visa"></i>
+            <i class="fab fa-cc-apple-pay"></i>
+          </div>
+          <div class="col-md-3 col-sm-3 text-center">
+            <h4 class="font-weight-bold">Biz bilan aloqa</h4>
+            <p class="d-flex justify-content-center flex-nowrap mb-2">
+              Manzil: Toshkent viloyati,Yangiyo'l shahri
+            </p>
+            <p class="Email">Email:Xaytboyevtuit.99@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <div class="pt-5" id="Manzil">
+        <iframe
+          src="http://maps.google.co.uk/maps?q=Yangiyo'l+shahar+Bozori &amp;output=embed"
+        >
+        </iframe>
+      </div>
+
+      <h4 class="text-center p-3">&copy Jakhongir Khaytboyev 2020</h4>
+    </footer>
+
+    <script src="./Js/products.js"></script>
+    <script src="./Js/productImage.js"></script>
+    <script src="./Js/jquary.js"></script>
+    <script src="./Js/main.js"></script>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="./bootstrap/jquary-bootstrap.js"></script>
+    <script src="./bootstrap/popper.js"></script>
+    <script src="./bootstrap/bootstrap.js"></script>
+  </body>
+</html>

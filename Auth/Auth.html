@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>Auth</title>
+    <link rel="stylesheet" href="./Auth.css" />
+  </head>
+  <body>
+    <section>
+      <div class="container">
+        <div class="user singinBx">
+          <div class="imgBx"><img src="./img/1_1.jpg" alt="" /></div>
+          <div class="formBx">
+            <form>
+              <h2>Akkountingizga kirish</h2>
+              <input type="text" placeholder="Username" />
+              <input type="password" placeholder="password" />
+              <input type="submit" value="Kirish" />
+              <p class="signup">
+                Akkountingiz yo'qmi?
+                <a href="#" onclick="toggleForm()">Ro'yxatdan o'tish</a>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class="user signupBx">
+          <div class="formBx">
+            <form>
+              <h2>Yangi akkount yaratish</h2>
+              <input type="text" placeholder="Username" />
+              <input type="email" placeholder="Email Address" />
+              <input type="password" placeholder="Create password" />
+              <input type="password" placeholder="Confirm password" />
+              <input type="submit" value="Ro'yhatdan o'tish" />
+              <p class="signup">
+                Allaqachon akkountingiz bormi?
+                <a href="#" onclick="toggleForm()">Kirish</a>
+              </p>
+            </form>
+          </div>
+          <div class="imgBx"><img src="./img/2.jpg" alt="" /></div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleForm() {
+        let container = document.querySelector(".container");
+        container.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>

@@ -73,6 +73,7 @@ $(document).ready(function () {
         <p class="m-1 p-1 text-center font-weight-bold">${productToAdd.price}</p>
         <span class="clear">O'chirish</span></li>
   `);
+
     // SavatchadagiMahsulotlar => bu bizada ul va uni ichiga li elementini joylayabman
     SavatchadagiMahsulotlar.append(ItemsLi);
     // AllProductsNumber => bu o'zgaruvchi jami mahsulotlar sonini sanaydi

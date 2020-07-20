@@ -94,20 +94,21 @@ $(document).ready(function () {
     // UmumiyPul => jami pullar yig'indisini shunga yi'gamiz
     HamyondagiDastlabkiPul.text(UmumiyPul);
   });
+
   $("#SavatchadagiMahsulot").click(".clear", function (event) {
     var ClearButton = $(event.target);
-    var ClearProduct = ClearButton.closest("li").remove();
-    var AllProductsNumber = $("#All-Products-Number");
-    MahsulotlarSoni -= ClearProduct.length;
-    AllProductsNumber.text(MahsulotlarSoni).length;
-    var DastlabkiMahsulotSoni = $("#Dastlabki-Mahsulot-Soni");
-    DastlabkiMahsulotSoni.text(MahsulotlarSoni).length;
-    var HamyondagiDastlabkiPul = $("#Hamyondagi-Dastlabki-Pul");
-    var AynanShuSumma = ClearButton.closest("li")
-      .data("product-price")
-      .slice(0, -4);
-    UmumiyPul -= AynanShuSumma;
-    HamyondagiDastlabkiPul.text(UmumiyPul);
+    if (ClearButton.hasClass("clear")) {
+      const todo = ClearButton.parents("li");
+      todo.remove();
+      var AllProductsNumber = $("#All-Products-Number");
+      MahsulotlarSoni -= SavatchadagiMahsulotlar.length;
+      var DastlabkiMahsulotSoni = $("#Dastlabki-Mahsulot-Soni");
+      AllProductsNumber.text(MahsulotlarSoni);
+      DastlabkiMahsulotSoni.text(MahsulotlarSoni);
+      var HamyondagiDastlabkiPul = $("#Hamyondagi-Dastlabki-Pul");
+      UmumiyPul -= ClearButton.parents("li").children("p").text().slice(0, -4);
+      HamyondagiDastlabkiPul.text(UmumiyPul);
+    }
     if (SavatchadagiMahsulot.children.length === 0) {
       var p = $(` <p class="m-0">Savatchada mahsulotlar yo'q</p>`);
       SavatchadagiMahsulotlar.append(p);
